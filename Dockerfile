@@ -40,6 +40,7 @@ RUN apk add --no-cache \
     php5-pear \
     php5-apcu \
     php5-cli \
+    php5-ctype \
     apache2-ssl
 
 RUN mkdir -p /srv/www /run/apache2 && \
