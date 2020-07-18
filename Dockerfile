@@ -41,9 +41,8 @@ RUN apk add --no-cache \
     php5-apcu \
     php5-cli \
     php5-ctype \
-    apache2-ssl
-
-RUN mkdir -p /srv/www /run/apache2 && \
+    apache2-ssl && \
+    mkdir -p /srv/www /run/apache2 && \
     chown apache:www-data /srv/www && \
     sed -ri \
         -e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' \
